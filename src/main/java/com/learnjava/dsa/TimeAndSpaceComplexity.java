@@ -19,7 +19,7 @@ public class TimeAndSpaceComplexity {
      *
      * @param n add n + n
      */
-    private static void sum(int n) {
+    protected void sum(int n) {
         System.out.println(n + n);
     }
 
@@ -38,7 +38,7 @@ public class TimeAndSpaceComplexity {
      * Even if n value increased or decreased 1 space is enough to store input.
      * Hence, Space complexity is O(1)
      */
-    private static void doubleSum(int n) {
+    protected void doubleSum(int n) {
         n = n + n;
         System.out.println(n + n);
     }
@@ -56,7 +56,7 @@ public class TimeAndSpaceComplexity {
      *
      * @param n print series up to n
      */
-    private static void printSeries(int n) {
+    protected void printSeries(int n) {
         for (int i = 0; i < n; i++) {
             System.out.println(i);
         }
@@ -76,7 +76,7 @@ public class TimeAndSpaceComplexity {
      * Even if n value increased or decreased 1 space is enough to store input.
      * Hence, Space complexity is O(1)
      */
-    private static void printSeriesTwice(int n) {
+    protected void printSeriesTwice(int n) {
         for (int i = 0; i < n; i++) {
             System.out.println(i);
         }
@@ -97,7 +97,7 @@ public class TimeAndSpaceComplexity {
      *
      * @param n print n times of n
      */
-    private static void printMatrix(int n) {
+    protected void printMatrix(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.println(i + "-" + j);
@@ -120,7 +120,7 @@ public class TimeAndSpaceComplexity {
      * even n value increased or decreased 1 space is enough to store input.
      * Hence, Space complexity is O(1)
      */
-    private static void printItems(int n) {
+    protected void printItems(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.println(i + "-" + j); //O(n^2)
@@ -142,7 +142,7 @@ public class TimeAndSpaceComplexity {
      * @param search value to be searched
      * @return index value if element found, else -1
      */
-    private static int binarySearch(int search) {
+    protected int binarySearch(int search) {
         // consider input as sorted array. length of the array is `n`
         int[] arr = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18};
         int left = 0; //left pointer
@@ -184,7 +184,7 @@ public class TimeAndSpaceComplexity {
      * As it can be considered 1 set of space for inputs, space will not increase if input values a & b increased.
      * Hence, Space complexity O(1).
      */
-    private static void addTwoSeries(int a, int b) {
+    protected void addTwoSeries(int a, int b) {
         for (int i = 0; i < a; i++) {
             System.out.println(i); //O(n) ~ O(a)
         }
@@ -193,37 +193,5 @@ public class TimeAndSpaceComplexity {
         }
     }
 
-    public static void main(String[] args) {
-        //This method explains O(n) time complexity.
-        System.out.println("Time Complexity O(n): ");
-        printSeries(10);
 
-        //This method explain Drop constant rule and O(2n) = O(n)
-        System.out.println("Drop Constant rule:");
-        printSeriesTwice(10);
-
-        //This method explains simple O(1) time complexity:
-        System.out.println("Time Complexity O(1):");
-        sum(5);
-
-        //This method explains set of operations:
-        System.out.println("Set of operations: O(2) ~= O(1)");
-        doubleSum(5);
-
-        //This method explains drop non-dominants rule:
-        System.out.println("Drop Non-Dominant Values:");
-        printItems(10);
-
-        //This method explains O(n^2)
-        System.out.println("Time Complexity O(n^2):");
-        printMatrix(10);
-
-        //This method explains O(log n) complexity by using binary search
-        System.out.println("Binary Search: find 0");
-        System.out.println("Search result:" + binarySearch(0));
-
-        //This method explains different references rule
-        System.out.println("Different References");
-        addTwoSeries(10, 20);
-    }
 }
