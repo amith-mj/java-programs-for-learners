@@ -7,20 +7,20 @@ package com.learnjava.dsa;
 public class TimeAndSpaceComplexity {
 
     /**
-     * This is simple example of O(1) complexity, which is most efficient.
+     * <p>This is simple example of O(1) complexity, which is most efficient.
      * Here only one operation is performed one time.
      * No. Of operations executed will not change based on n value.
      * Either n=1 or n=10,00,000 only one addition operation is performed.
-     * Hence, Time complexity is O(1).
-     * ---***---
-     * Here only one space is required to store input n.
+     * Hence, Time complexity is O(1). </p
+     * <br>
+     * <p>Here only one space is required to store input n.
      * Even if n value increased or decreased 1 space is enough to store input.
-     * Hence, Space complexity is O(1)
+     * Hence, Space complexity is O(1)</p>
      *
-     * @param n add n + n
+     * @param num add twice with num
      */
-    protected void sum(int n) {
-        System.out.println(n + n);
+    protected void sum(int num) {
+        System.out.println(num + num);
     }
 
     /**
@@ -121,11 +121,14 @@ public class TimeAndSpaceComplexity {
      * Hence, Space complexity is O(1)
      */
     protected void printItems(int n) {
+        System.out.println("O(n^2) complexity");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.println(i + "-" + j); //O(n^2)
             }
         }
+
+        System.out.println("O(n) complexity");
         for (int j = 0; j < n; j++) {
             System.out.println(j);  //O(n)
         }
