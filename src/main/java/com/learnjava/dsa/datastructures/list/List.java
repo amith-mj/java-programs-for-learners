@@ -11,4 +11,5 @@ public interface List<E> {
     E removeLast();
     E remove(int index);
     void reverse();
+    void clear();
 }

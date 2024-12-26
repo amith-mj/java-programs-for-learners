@@ -12,7 +12,7 @@ public class TimeAndSpaceComplexity {
      * No. Of operations executed will not change based on n value.
      * Either n=1 or n=10,00,000 only one addition operation is performed.
      * Hence, Time complexity is O(1).
-     * ---***---
+     *  ---***---
      * Here only one space is required to store input n.
      * Even if n value increased or decreased 1 space is enough to store input.
      * Hence, Space complexity is O(1)

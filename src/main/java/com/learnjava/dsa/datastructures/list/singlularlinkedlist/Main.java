@@ -15,5 +15,9 @@ public class Main {
         linkedList.reverse();
 
         linkedList.printList();
+        // linkedList.getValue(-1);
+        linkedList.clear();
+        linkedList.removeFirst();
+        linkedList.printList();
     }
 }

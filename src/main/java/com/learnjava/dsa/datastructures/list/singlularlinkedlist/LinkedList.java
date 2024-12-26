@@ -198,4 +198,11 @@ public class LinkedList<E> implements List<E> {
             temp = after;
         }
     }
+
+    @Override
+    public void clear(){
+        head = null;
+        tail = null;
+        length = 0;
+    }
 }
