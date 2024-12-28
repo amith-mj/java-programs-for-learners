@@ -210,9 +210,9 @@ public class LinkedList<E> implements List<E> {
      */
     @Override
     public E removeFirst() {
-        if (length == 0)
+        if (length == 0) {
             throw new UnsupportedOperationException("List is already empty");
-
+        }
         Node<E> temp = head;
         head = head.next;
         temp.next = null;
